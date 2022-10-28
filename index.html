@@ -1,181 +1,64 @@
-<!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>JZ</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+    <head>
+        <title>Justin Zhang (CMU BSCS '23)</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+</head>
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+<body>
+    <div class="uk-position-relative" style="font-family:Courier New">
+        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="images/street_with_me.png"  uk-img>
+        <canvas width="1600" height="400"></canvas>
+        <div class="uk-overlay uk-light uk-position-center">
+        <h1 class="uk-heading-line uk-text-center" style="font-family:Courier New;color:white">Justin Zhang</h1> <h1 class="uk-heading-line uk-text-center" style="font-family:Courier New;color:white;font-size:16px">Undergrad @ CMU SCS</h1>
+        </div>
+        </div>
+        <div class="uk-position-top">
+            <nav class="uk-navbar-container uk-navbar-transparent" style="font-family:Courier New" uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav" style="font-family:Courier New">
+                        <li class="uk-active"><a href="index.html">Home</a></li>
+                        <li><a href="07400.html">Research</a></li>
+                        <li><a href="courses.html">Coursework</a></li>
+                        <li><a href="jobs.html"></a>Jobs</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/literallyme.png" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1><strong>Justin Zhang</strong></h1>
-							</header>
-							<p>Computer Science Major at Carnegie Mellon University (2019 - 2022)</p>
-							<a href="#work" class="button large scrolly">My Stuff</a>
-						</div>
-					</div>
-				</div>
-			</article>
 
-		<!-- Work -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>Here's all the stuff I do.</h2>
-						<p>Odio turpis amet sed consequat eget posuere consequat.</p>
-					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>Consequat lorem</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Lorem dolor tempus</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-thumbs-up"></span>
-								<h3>Feugiat posuere</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
-					</footer>
-				</div>
-			</article>
+        <article class="uk-article" style="font-family:Courier New">
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2><strong>Recent Work</strong></h2>
-						<p>Helloooo</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">MTA Real Time DIY Sign</a></h3>
-								<p>I have always wanted to do a hardware project so this is a nice introduction to that. This sign is connected to a rasberry pi which uses an AWS server listener to the MTA API.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Privilege Awareness Task</a></h3>
-								<p>Cool Pygame Application I made for UPitt's GPN lab! It tests implicit biases in users using reaction time in a game like setting. Pretty cool, in my opinion :)</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Message Board</a></h3>
-								<p>A reddit-like clone. Will be deployed soon!</p>
-							</article>
-						</div>
+        <p class="uk-text-lead" >Discovery.</p>
 
-			<!--
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Tempus dolore</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h3><a href="#">Feugiat aliquam</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
-				</div> 
-			-->
-			</article>
+        <p style="margin:16px">I am a senior at Carnegie Mellon University, majoring in Computer Science with a minor in mathematical sciences and a concentration in algorithms and complexity theory. My interests are in error correcting codes, complexity theory, statistical learning, and type theory. I am doing research as a part of the <a class="uk-link-muted"     href="http://www.cs.cmu.edu/~rvinayak/#group">TheSys research group</a>. My studies have been immensely enriching, and I would love to continue my education; currently preparing to apply to grad schools :)</p>
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
-						</div>
-					</div>
+        <p style="margin:16px">Here are some of the cool classes I am taking right now!</p>
+        <div class="uk-grid-small uk-child-width-auto" style="width: 600px;margin-left: 50px;" uk-grid>
+            <div>
+            <ul class="uk-list uk-list-square">
+                <li>15859: Randomness in Computation</li>
+                <li>15459: Quantum Computation</li>
+                <li>15312: Practical Foundations for Programming Languages</li>
+                <li>21355: Real Analysis I</li>
+            </ul>
+            </div>
+        </div>
 
-				</div>
-			</article>
+                        <p style="margin:16px">I am currently doing research as a part of the <a class="uk-link-muted" href="http://www.cs.cmu.edu/~rvinayak/#group">TheSys research group</a></p>
+        <div class="uk-grid-small uk-child-width-auto" uk-grid>
+            <div>
+                <a class="uk-button uk-button-text" href="#">More about me</a>
+            </div>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
-</html>
+                <p class="uk-text-lead" >Previous Experiences.</p>
+    </article>
+    <a href="" uk-totop></a>
+</body>
