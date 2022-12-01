@@ -5,17 +5,14 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Justin Zhang';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = "JZ CMU '23";
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -36,7 +33,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.headingXl}>{name}</h1>
           </>
         ) : (
           <>
@@ -45,12 +42,12 @@ export default function Layout({ children, home }) {
                 priority
                 src="/images/me.jpg"
                 className={utilStyles.borderCircle}
-                height={108}
-                width={108}
+                height={144}
+                width={144}
                 alt=""
               />
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className={utilStyles.headingXl}>
               <Link href="/" className={utilStyles.colorInherit}>
                 {name}
               </Link>
@@ -58,7 +55,10 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossOrigin="anonymous"></link>
+        {children}
+      </main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>

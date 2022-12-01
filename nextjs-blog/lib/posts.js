@@ -3,8 +3,25 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from "remark-html";
+import remarkMath from 'remark-math';
+import remarkRehype from "remark-rehype"
+import remarkParse from "remark-parse"
+import rehypeStringify from "rehype-stringify"
+import rehypeKatex from "rehype-katex"
+
 
 const postsDirectory = path.join(process.cwd(), 'posts');
+
+export  function titleToKatexs(title) {
+  const processedContent =  remark()
+  .use(remarkMath)
+  .use(remarkRehype)
+  .use(rehypeKatex)
+  .use(rehypeStringify)
+  .process(title)
+  const s = processedContent.toString();
+  return s;
+}
 
 export function getSortedPostsData() {
   // Get file names under /posts
@@ -26,6 +43,8 @@ export function getSortedPostsData() {
       ...matterResult.data,
     };
   });
+
+  console.log(allPostsData)
   // Sort posts by date
   return allPostsData.sort(({ date: a }, { date: b }) => {
     if (a < b) {
@@ -37,6 +56,20 @@ export function getSortedPostsData() {
     }
   });
 }
+
+
+export async function titleToKatex(title) {
+  const processedContent = await remark()
+  .use(remarkMath)
+  .use(remarkRehype)
+  .use(rehypeKatex)
+  .use(rehypeStringify)
+  .process(title)
+  const s = processedContent.toString();
+  return s;
+}
+
+
 
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
@@ -72,9 +105,14 @@ export async function getPostData(id) {
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
-    .use(html)
+    .use(remarkParse)
+    .use(remarkMath)
+    .use(remarkRehype)
+    .use(rehypeKatex)
+    .use(rehypeStringify)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
+
 
   // Combine the data with the id and contentHtml
   return {
