@@ -7,26 +7,36 @@
   }
   
   .headingXl {
-    font-size: 2rem;
-    line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    font-size: 2.5rem;
+  
   }
   
   .headingLg {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin: 1rem 0;
+    margin-left: 1rem;
+    font-size: 2rem;
+    line-height: 1;
+
   }
   
   .headingMd {
+    margin: 1rem;
     font-size: 1.2rem;
     line-height: 1.5;
+    width: 90%;
   }
-  
-  .borderCircle {
-    border-radius: 9999px;
+  .headingSm {
+    font-size: .8rem;
+
+  }
+
+  .picture {
+    margin: 1rem;
+    width: 45rem;
+    height: 14rem;
+    object-fit: cover;
+
   }
   
   .colorInherit {
@@ -44,9 +54,18 @@
   }
   
   .listItem {
-    margin: 0 0 1.25rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .listItem:hover {
+    color: #b5c5bd;
+  }
+
+  .listItem:visited {
+    color: #e3dbdb
   }
   
   .lightText {
-    color: #666;
+    color: #f9f9f9;
   }

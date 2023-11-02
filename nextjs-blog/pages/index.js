@@ -27,19 +27,21 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <section className={utilStyles.headingXl}>Justin Zhang</section>
       <section className={utilStyles.headingMd}>
-        <p>I am a senior at Carnegie Mellon University, majoring in Computer Science with a minor in mathematical sciences and a concentration in algorithms and complexity theory. 
-          My interests are in error correcting codes, complexity theory, statistical learning, and type theory. I am doing research as a part of the <Link href="http://www.cs.cmu.edu/~rvinayak/#group">TheSys research group</Link>.
-          Currently preparing to apply to grad schools :)</p>
+        <p>
+          Hi! I am a 5th Year CS Master's Student @ CMU, advised by Rashmi Vinayak in the TheSys group. 
+          I am fascinated by errors in computation and the algebraic structures that allow us to reason about 
+          fundamental limitations of correction. I am investigating the application of erasure codes in distributed 
+          storage systems, and the applications of error correction in ring-LWE post quantum cryptography. My CV
+        </p>
       </section>
-
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+      <section className={`${utilStyles.headingLg}`}>Writing</section>
+      <section className={`${utilStyles.headingMd}`}>
         <ul className={utilStyles.list}>
   {allPostsData.map(({ id, date, title }) => (
     <li className={utilStyles.listItem} key={id}>
     <Link href={`/posts/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
-    <br />
     <small className={utilStyles.lightText}>
       <Date dateString={date} />
     </small>

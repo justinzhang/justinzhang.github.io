@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Justin Zhang';
-export const siteTitle = "JZ CMU '23";
+export const siteTitle = "Justin Zhang's Website";
 
 export default function Layout({ children, home }) {
   return (
@@ -27,23 +27,37 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/me.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              src="/images/me2.png"
+              className={utilStyles.picture}
+              height={4000}
+              width={4000}
               alt=""
             />
-            <h1 className={utilStyles.headingXl}>{name}</h1>
+            <div className={utilStyles.headingSm}>justinz [at] andrew.cmu.edu</div>
+            {/* <section className={utilStyles.headingXl}>{name}</section> */}
+            {/*empty container to create space*/}
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}>&nbsp; </div>
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}>&nbsp; </div>
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}>&nbsp; </div>
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}> &nbsp;</div>
+            <div className={utilStyles.headingXl}>&nbsp; </div> 
           </>
         ) : (
           <>
             <Link href="/">
               <Image
                 priority
-                src="/images/me.jpg"
-                className={utilStyles.borderCircle}
-                height={144}
-                width={144}
+                src="/images/me2.png"
+                className={utilStyles.picture}
+                height={4000}
+                width={4000}
                 alt=""
               />
             </Link>
