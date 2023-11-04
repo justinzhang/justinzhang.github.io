@@ -9,7 +9,7 @@ export const siteTitle = "Justin Zhang's Website";
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className={home ? styles.container : styles.revContainer}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         
@@ -47,37 +47,24 @@ export default function Layout({ children, home }) {
             <div className={utilStyles.headingXl}> &nbsp;</div>
             <div className={utilStyles.headingXl}> &nbsp;</div>
             <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}>&nbsp; </div> 
+            <div className={utilStyles.headingXl}>&nbsp; </div>
           </>
+
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/me2.png"
-                className={utilStyles.picture}
-                height={4000}
-                width={4000}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingXl}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
           </>
         )}
       </header>
       <main>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossOrigin="anonymous"></link>
         {children}
-      </main>
-      {!home && (
+        {(!home &&
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
       )}
+      </main>
+      
     </div>
   );
 }

@@ -5,15 +5,20 @@ import Link from 'next/link';
 import { getSortedPostsData, titleToKatex } from './../lib/posts';
 import Date from '../components/date';
 
+const postTypes = ["Posts", "Presentations"];
 
 export async function getStaticProps() {
 
-  let allPostsData = getSortedPostsData();
-
-  for (let postData of allPostsData) {
-    postData.title = await titleToKatex(postData.title);
+  // build a list of all post data and convert titles to katex
+  let allPostsData = {};
+  for (let postType of postTypes) {
+    allPostsData[postType] = getSortedPostsData(postType);
   }
-    
+  for (let postType of postTypes) {
+    for (let postData of allPostsData[postType]) {
+      postData.title = await titleToKatex(postData.title);
+    }
+  }
   return {
     props: {
       allPostsData,
@@ -22,6 +27,29 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  let postList = [];
+
+  for (let postType of postTypes) {
+    postList.push(
+      <section className={`${utilStyles.headingLg}`}> {postType}
+        <section className={`${utilStyles.headingMd}`}>
+        <div className={utilStyles.blockshit}>&nbsp;</div>
+          <ul className={utilStyles.list}>
+            {allPostsData[postType].map(({ id, date, title }) => (
+              console.log(id),
+            <li className={utilStyles.listItem} key={id}>
+            <Link href={`/${postType}/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
+            <small className={utilStyles.lightText}>
+              <Date dateString={date} />
+            </small>
+            </li>
+          ))}
+          </ul>
+        </section>
+      </section>
+    )
+  }
+
   return (
     <Layout home>
       <Head>
@@ -36,19 +64,7 @@ export default function Home({ allPostsData }) {
           storage systems, and the applications of error correction in ring-LWE post quantum cryptography. My CV
         </p>
       </section>
-      <section className={`${utilStyles.headingLg}`}>Writing</section>
-      <section className={`${utilStyles.headingMd}`}>
-        <ul className={utilStyles.list}>
-  {allPostsData.map(({ id, date, title }) => (
-    <li className={utilStyles.listItem} key={id}>
-    <Link href={`/posts/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
-    <small className={utilStyles.lightText}>
-      <Date dateString={date} />
-    </small>
-    </li>
-  ))}
-</ul>
-      </section>
+      {postList}
     </Layout>
   );
 
