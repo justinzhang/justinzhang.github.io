@@ -5,10 +5,10 @@ import Date from '../../components/date';
 import postsStyles from '../../styles/posts.module.css';
 import { titleToKatex } from '../../lib/posts';
 
-const postTypes = ["Posts"];
+const postTypes = ["posts"];
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData("Posts",params.id);
+    const postData = await getPostData(params.id);
     const postTitle = await titleToKatex(postData.title);
 
     return {
@@ -20,10 +20,7 @@ export async function getStaticProps({ params }) {
   }
 
 export async function getStaticPaths() {
-  let paths = [];
-  for (let postType of postTypes) {
-    paths = paths.concat(getAllPostIds(postType));
-  }
+  let paths = getAllPostIds();
 
   console.log(paths);
   return {

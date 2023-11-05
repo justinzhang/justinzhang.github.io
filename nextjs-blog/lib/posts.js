@@ -9,9 +9,7 @@ import remarkParse from "remark-parse"
 import rehypeStringify from "rehype-stringify"
 import rehypeKatex from "rehype-katex"
 
-const postTypes = ["Posts", "Presentations"];
-
-// const postsDirectory = path.join(process.cwd(), 'posts');
+const postsDirectory = path.join(process.cwd(), 'posts');
 
 export  function titleToKatexs(title) {
   const processedContent =  remark()
@@ -24,9 +22,8 @@ export  function titleToKatexs(title) {
   return s;
 }
 
-export function getSortedPostsData(postType) {
+export function getSortedPostsData() {
   // Get file names under /posts
-  let postsDirectory = path.join(process.cwd(), postType);
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
@@ -40,7 +37,7 @@ export function getSortedPostsData(postType) {
     const matterResult = matter(fileContents);
 
     // Combine the data with the id
-    return { postType,
+    return {
       id,
       ...matterResult.data,
     };
@@ -73,8 +70,7 @@ export async function titleToKatex(title) {
 
 
 
-export function getAllPostIds(postType) {
-  let postsDirectory = path.join(process.cwd(), postType);
+export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
 
   // Returns an array that looks like this:
@@ -93,15 +89,13 @@ export function getAllPostIds(postType) {
   return fileNames.map((fileName) => {
     return {
       params: {
-        postType : postType,
         id: fileName.replace(/\.md$/, ''),
       },
     };
   });
 }
 
-export async function getPostData(postType,id) {
-  let postsDirectory = path.join(process.cwd(), postType);
+export async function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -121,7 +115,6 @@ export async function getPostData(postType,id) {
 
   // Combine the data with the id and contentHtml
   return {
-    postType,
     id,
     contentHtml,
     ...matterResult.data,
