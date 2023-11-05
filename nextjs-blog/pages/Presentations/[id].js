@@ -5,7 +5,7 @@ import Date from '../../components/date';
 import postsStyles from '../../styles/posts.module.css';
 import { titleToKatex } from '../../lib/posts';
 
-const postTypes = ["posts", "Presentations"];
+const postTypes = ["Presentations"];
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData("Presentations",params.id);
