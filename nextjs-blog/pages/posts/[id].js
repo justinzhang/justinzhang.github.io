@@ -8,7 +8,7 @@ import { titleToKatex } from '../../lib/posts';
 const postTypes = ["posts", "Presentations"];
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData("posts",params.id);
+    const postData = await getPostData("Posts",params.id);
     const postTitle = await titleToKatex(postData.title);
 
     return {
