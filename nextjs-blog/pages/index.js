@@ -62,7 +62,7 @@ export default function Home({ allPostsData }) {
       
 
       <section className={`${utilStyles.headingLg}`}> Posts
-        <section className={`${utilStyles.headingMd}`}>
+        <section className={`${utilStyles.listItemFormat}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (

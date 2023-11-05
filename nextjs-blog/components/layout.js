@@ -34,20 +34,11 @@ export default function Layout({ children, home }) {
               alt=""
             />
             <div className={utilStyles.headingSm}>justinz [at] andrew.cmu.edu</div>
-            {/* <section className={utilStyles.headingXl}>{name}</section> */}
             {/*empty container to create space*/}
             <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}>&nbsp; </div>
-            <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}>&nbsp; </div>
-            <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}>&nbsp; </div>
-            <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}> &nbsp;</div>
-            <div className={utilStyles.headingXl}>&nbsp; </div>
+            
+
+
           </>
 
         ) : (
