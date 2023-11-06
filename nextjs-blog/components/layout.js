@@ -29,8 +29,8 @@ export default function Layout({ children, home }) {
               priority
               src="/images/me2.png"
               className={utilStyles.picture}
-              height={4000}
-              width={4000}
+              height={1000}
+              width={1000}
               alt=""
             />
             <div className={utilStyles.headingSm}>justinz [at] andrew.cmu.edu</div>
