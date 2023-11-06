@@ -35,6 +35,7 @@ export default function Layout({ children, home }) {
             />
             <div className={utilStyles.headingSm}>justinz [at] andrew.cmu.edu</div>
             {/*empty container to create space*/}
+            <div className={utilStyles.headingSm}><a href='/doc/cv.pdf'>My CV</a></div>
             <div className={utilStyles.headingXl}> &nbsp;</div>
             
 
@@ -50,9 +51,8 @@ export default function Layout({ children, home }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossOrigin="anonymous"></link>
         {children}
         {(!home &&
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
+
+          <Link href="/" className={styles.backToHome}>← Back to home</Link>
       )}
       </main>
       

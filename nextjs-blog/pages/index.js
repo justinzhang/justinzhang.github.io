@@ -51,12 +51,19 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingXl}>Justin Zhang</section>
-      <section className={utilStyles.headingMd}>
-        <p>
-          Hi! I am a 5th Year CS Master's Student @ CMU, advised by Rashmi Vinayak in the TheSys group. 
+      <section className={utilStyles.paragraphVert}>
+        <p className={utilStyles.p}>
+          Hi! I am a 5th Year CS Master's Student @ CMU, advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a> in the TheSys group. 
           I am fascinated by errors in computation and the algebraic structures that allow us to reason about 
-          fundamental limitations of correction. I am investigating the application of erasure codes in distributed 
-          storage systems, and the applications of error correction in ring-LWE post quantum cryptography. My CV
+          fundamental hardness of correction. I am investigating the application of erasure codes in distributed 
+          storage systems through the convertible codes framework, a related, exciting subarea similar to the node-repair problem! 
+          Concurently, I have also started studying the fascinating use of LWE and lattices in post-quantum cryptography under the guidance of <a href="https://sites.google.com/view/aayushjain/home">Aayush Jain</a>.
+        </p>
+          
+
+        <p>
+          Outside of math, my hobbies are running, pushing buggies, and learning languages. I help run a volunteer organization called <a href='https://www.ueaa.org/fun-fun-saturday/'>Fun Fun Saturday</a> in New York City's Chinatown
+          where we offer a large variety of classes to recent immigrant children. If you are interested in teaching a class, please reach out to me!
         </p>
       </section>
       
@@ -76,6 +83,7 @@ export default function Home({ allPostsData }) {
           </ul>
         </section>
       </section>
+      
     </Layout>
   );
 

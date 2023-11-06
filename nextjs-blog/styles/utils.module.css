@@ -8,7 +8,7 @@
   
   .headingXl {
     margin-left: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 3rem;
   
   }
@@ -24,6 +24,19 @@
     margin-left: 1rem;
     font-size: 2rem;
     line-height: 1;
+  }
+
+  .paragraphVert {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p {
+    margin-bottom: 1rem;
   }
   
   .blockshit {
@@ -74,7 +87,8 @@
   .padding1px {
     padding-top: 1px;
   }
-  
+
+
   .list {
     list-style: none;
     padding: 0;
