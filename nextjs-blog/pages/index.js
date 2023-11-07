@@ -52,6 +52,12 @@ export default function Home({ allPostsData, allProjectData }) {
   //   )
   // }
 
+  let presentations = [{ title: "On the Selberg Sieve", date: "October 2023", id:"selberg", link: "/presentations/Arithmetic.pdf"},
+                        { title: "Coding Theory and Applications to Storage Systems", date: "May 2023", id: "coding-theory", link: "https://docs.google.com/presentation/d/1hN3y1v0eISPhWRdYFkJjnzSvrAD4_s2l4gR4GtQpVmU/edit?usp=sharing" },
+                        { title: "Matrix Approximations for Recommender Systems on TPUs", date: "May 2022", id:"tpu", link: "https://symposium.foragerone.com/meeting-of-the-minds-2022/presentations/46003"},
+                        
+                      ]
+
   return (
     <Layout home>
       <Head>
@@ -87,6 +93,23 @@ export default function Home({ allPostsData, allProjectData }) {
             <li className={utilStyles.listItem} key={id}>
             <Link href={`/projects/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
             <small className={utilStyles.lightText}>{summary} ({date}) </small>
+            </li>
+          ))}
+          </ul>
+        </section>
+      </section>
+
+      <section className={`${utilStyles.headingLg}`}> Presentations
+        <section className={`${utilStyles.listItemFormat}`}>
+        <div className={utilStyles.blockshit}>&nbsp;</div>
+          <ul className={utilStyles.list}>
+            {presentations.map(({ title,date,link,id}) => (
+            <li className={utilStyles.listItem} key={id}>
+            <Link href={link} dangerouslySetInnerHTML={{ __html: title}}/>
+            
+            <small className={utilStyles.lightText}>
+               {" (" + date})
+            </small>
             </li>
           ))}
           </ul>
