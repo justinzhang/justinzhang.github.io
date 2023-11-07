@@ -1,5 +1,5 @@
 ---
-title: The Birth of My Website
+title: My Website
 date: '2022-12-01'
 ---
 With my goals of applying to graduate schools, I thought it was nigh time to invest some time into creating a personal website. So, I put on my special 'web dev' hat and got to work. 

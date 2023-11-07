@@ -1,26 +1,26 @@
 import Layout from '../../components/layout';
-import { getPostData, getAllPostIds } from '../../lib/posts';
+import { getProjectData, getAllProjectIds } from '../../lib/projects';
 import Head from 'next/head';
 import Date from '../../components/date';
 import postsStyles from '../../styles/posts.module.css';
-import { titleToKatex } from '../../lib/posts';
+import { titleToKatex } from '../../lib/projects';
 
 
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id);
-    const postTitle = await titleToKatex(postData.title);
+    const projectData = await getProjectData(params.id);
+    const projectTitle = await titleToKatex(projectData.title);
 
     return {
       props: {
-        postData,
-        postTitle,
+        projectData,
+        projectTitle,
       },
     };
   }
 
 export async function getStaticPaths() {
-  let paths = getAllPostIds();
+  let paths = getAllProjectIds();
 
   console.log(paths);
   return {
@@ -29,21 +29,20 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData, postTitle }) {
-    // console.log(postTitle);
+export default function Project({ projectData, projectTitle }) {
     return (
       <Layout>
         <Head>
-            <title>{postData.id}</title>
+            <title>{projectData.id}</title>
         </Head>
         <article>
-        <section className={postsStyles.headingLg} dangerouslySetInnerHTML={{ __html: postTitle}}/>
+        <section className={postsStyles.headingLg} dangerouslySetInnerHTML={{ __html: projectTitle}}/>
           <div className={postsStyles.dateMd}>
-            <Date dateString={postData.date} />
+            {projectData.summary} ({projectData.date})
           </div>
         <section className={postsStyles.articleText}>
           <div className={postsStyles.blockshit}>&nbsp;</div>
-          <div className={postsStyles.textMd} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div className={postsStyles.textMd} dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
         </section>
       </article>
       </Layout>
