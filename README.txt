@@ -1,3 +1,3 @@
-My website
+#My website
 
-Made with html and css, deployed with github pages!!
+Made mainly with Node and Next.js (and a little love).
