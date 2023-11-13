@@ -9,6 +9,11 @@
     filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
   }
 
+.footer {
+  text-align: center;
+  color:hsl(from color h s l)
+}
+
 .revContainer {
     max-width: 80%;
     padding: 0 2rem;

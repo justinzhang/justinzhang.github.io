@@ -74,13 +74,13 @@ export default function Home({ allPostsData, allProjectData }) {
         </p>
 
         <p className={utilStyles.p}>
-          I was previously a SWE intern at Goldman Sachs, where I worked on the permissions system.
+          I was previously a SWE intern at Goldman Sachs, where I worked on the permissions streaming engine with the systems engineering team.
         </p>
           
 
         <p>
-          Outside of math, my hobbies are running and pushing buggies for Fringe. I help run a volunteer organization called <a href='https://www.ueaa.org/fun-fun-saturday/'>Fun Fun Saturday</a> in New York City's Chinatown
-          where we offer a large variety of classes to recent immigrant children. If you are interested in teaching a class, please reach out to me!
+          Outside of math, my hobbies are running and pushing buggies (<a href='https://www.cmu.edu/buggy/'>a CMU tradition</a>) for Fringe. I also help run a volunteer organization called <a href='https://www.ueaa.org/fun-fun-saturday/'>Fun Fun Saturday</a> in New York City's Chinatown
+          where we offer a large variety of classes to recent immigrant children ages 8-13. If you are interested in teaching a class, please reach out to me!
         </p>
       </section>
 

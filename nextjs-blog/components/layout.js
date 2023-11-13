@@ -8,7 +8,7 @@ const name = 'Justin Zhang';
 export const siteTitle = "Justin Zhang's Website";
 
 export default function Layout({ children, home }) {
-  return (
+  return (<div>
     <div className={home ? styles.container : styles.revContainer}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -57,5 +57,10 @@ export default function Layout({ children, home }) {
       </main>
       
     </div>
+        { home ?
+        <div className={styles.footer}><Link href="https://github.com/justinzhang/justinzhang.github.io" className={styles.backToHome}>Website Repo</Link></div>
+          : <></>
+        }
+  </div>
   );
 }
