@@ -74,7 +74,8 @@ export default function Home({ allPostsData, allProjectData }) {
         </p>
 
         <p className={utilStyles.p}>
-          I was previously a SWE intern at Goldman Sachs, where I worked on the permissions streaming engine with the systems engineering team.
+          I was previously a SWE intern at Goldman Sachs in 2022, where I worked on the permissions streaming engine with the systems engineering team.
+          This summer 2024, I will be joining Amazon as a SDE intern in Seattle.
         </p>
           
 
