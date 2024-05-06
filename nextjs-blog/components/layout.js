@@ -33,7 +33,7 @@ export default function Layout({ children, home }) {
               width={1000}
               alt=""
             />
-            <div className={utilStyles.headingSm}>justinz [at] andrew.cmu.edu</div>
+            <div className={utilStyles.headingSm}>zhan3554 [at] purdue.edu</div>
             {/*empty container to create space*/}
             <div className={utilStyles.headingSm}><a href='/docs/cv.pdf'>My CV</a></div>
             <div className={utilStyles.headingXl}> &nbsp;</div>
