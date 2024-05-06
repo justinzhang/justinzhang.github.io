@@ -5,6 +5,10 @@ import Link from 'next/link';
 import { getSortedPostsData, titleToKatex } from './../lib/posts';
 import { getSortedProjectData } from '../lib/projects';
 import Date from '../components/date';
+import { motion } from 'framer-motion';
+import { vi } from 'date-fns/locale';
+import { useState } from 'react';
+import { set } from 'date-fns';
 
 const postTypes = ["Posts", "Presentations"];
 
@@ -57,32 +61,56 @@ export default function Home({ allPostsData, allProjectData }) {
                         { title: "Matrix Approximations for Recommender Systems on TPUs", date: "May 2022", id:"tpu", link: "https://symposium.foragerone.com/meeting-of-the-minds-2022/presentations/46003"},
                         
                       ]
-
+  
+  const [hovered, setHovered] = useState(false);
   return (
-    <Layout home>
+     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingXl}>Justin Zhang</section>
+      <motion.div 
+        onHoverStart={() => {setHovered(true)}}
+        onHoverEnd={() => {setHovered(false)}}
+        transition={{ duration: 0.5 }}
+      >
+
+      <section className={utilStyles.headingXl}>
+          <motion.span
+            animate={{ opacity: 1, color: hovered ? ['#e3dbdb','#C41230'] : ['#C41230','#e3dbdb'] , transition: {duration: 1}}}
+          >
+            J
+          </motion.span ><motion.span animate={{color: hovered ? ['#e3dbdb','#000000'] : ['#000000','#e3dbdb'], transition: {duration: 1}}}>ustin </motion.span>
+          
+          <motion.span
+            initial={{ color: "white"}}
+            animate={{ color: hovered ? ['#e3dbdb','#cfb991'] : ['#cfb991','#e3dbdb'], transition: {duration: 1} }}
+           
+          >
+            Z
+          </motion.span><motion.span animate={{ color: hovered ? ['#e3dbdb','#000000'] : ['#000000','#e3dbdb'], transition: {duration: 1} }}>hang </motion.span>
+          </section> 
+
+      </motion.div>
+
       <section className={utilStyles.paragraphVert}>
+        
         <p className={utilStyles.p}>
           Hi! I am a 5th Year CS Master's Student @ CMU, advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a> in the TheSys group. 
           I am fascinated by errors in computation and the algebraic structures that allow us to reason about 
           fundamental hardness of correction. I am investigating the application of erasure codes in distributed 
           storage systems through the convertible codes framework, a related, exciting subarea similar to the node-repair problem! 
-          Concurently, I have also started studying the fascinating use of LWE and lattices in post-quantum cryptography under the guidance of <a href="https://sites.google.com/view/aayushjain/home">Aayush Jain</a>.
         </p>
 
         <p className={utilStyles.p}>
           I was previously a SWE intern at Goldman Sachs in 2022, where I worked on the permissions streaming engine with the systems engineering team.
-          This summer 2024, I will be joining Amazon as a SDE intern in Seattle.
+          This summer 2024, I will be joining Amazon as a SDE intern in Seattle, and in the fall, I will be heading to Purdue University to pursue a PhD in Computer Science!
         </p>
           
 
-        <p>
+        {/* <p>
           Outside of math, my hobbies are running and pushing buggies (<a href='https://www.cmu.edu/buggy/'>a CMU tradition</a>) for Fringe. I also help run a volunteer organization called <a href='https://www.ueaa.org/fun-fun-saturday/'>Fun Fun Saturday</a> in New York City's Chinatown
           where we offer a large variety of classes to recent immigrant children ages 8-13. If you are interested in teaching a class, please reach out to me!
-        </p>
+        </p> */}
       </section>
 
 
@@ -99,7 +127,7 @@ export default function Home({ allPostsData, allProjectData }) {
           </ul>
         </section>
       </section>
-
+     
       <section className={`${utilStyles.headingLg}`}> Presentations
         <section className={`${utilStyles.listItemFormat}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
@@ -117,7 +145,7 @@ export default function Home({ allPostsData, allProjectData }) {
         </section>
       </section>
       
-
+      
       <section className={`${utilStyles.headingLg}`}> Posts
         <section className={`${utilStyles.listItemFormat}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
@@ -134,8 +162,7 @@ export default function Home({ allPostsData, allProjectData }) {
         </section>
       </section>
       
-    </Layout>
-  );
+    </Layout>);
 
 }
 
