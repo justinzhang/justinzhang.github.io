@@ -29,6 +29,8 @@ export default function Layout({ children, home }) {
               priority
               src="/images/zhangjustin.jpg"
               className={utilStyles.picture}
+              height={1000}
+              width={800}
               alt=""
             />
             <div className={utilStyles.headingSm}>zhan3554 [at] purdue.edu</div>
