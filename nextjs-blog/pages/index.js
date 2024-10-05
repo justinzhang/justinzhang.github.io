@@ -95,22 +95,17 @@ export default function Home({ allPostsData, allProjectData }) {
       <section className={utilStyles.paragraphVert}>
         
         <p className={utilStyles.p}>
-          Hi! I am a 5th Year CS Master's Student @ CMU, advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a> in the TheSys group. 
-          I am fascinated by errors in computation and the algebraic structures that allow us to reason about 
-          fundamental hardness of correction. I am investigating the application of erasure codes in distributed 
-          storage systems through the convertible codes framework, a related, exciting subarea similar to the node-repair problem! 
+          Hi! I am a first year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. 
+          I am fortunate to be supported by the  CS Deptartment's Presidential Excellence PhD Award.
+          Previously, I completed my CS BS + CS MS at Carnegie Mellon University, where I was advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a>.
         </p>
 
         <p className={utilStyles.p}>
-          I was previously a SWE intern at Goldman Sachs in 2022, where I worked on the permissions streaming engine with the systems engineering team.
-          This summer 2024, I will be joining Amazon as a SDE intern in Seattle, and in the fall, I will be heading to Purdue University to pursue a PhD in Computer Science!
+         My research interests lie in the intersection of coding theory and cryptography. 
+         What are the fundamental trade-offs between security and fault tolerance? 
+         Moreover, what assumptions permit cryptography to be beneficial in coding theory and vice versa?
         </p>
           
-
-        {/* <p>
-          Outside of math, my hobbies are running and pushing buggies (<a href='https://www.cmu.edu/buggy/'>a CMU tradition</a>) for Fringe. I also help run a volunteer organization called <a href='https://www.ueaa.org/fun-fun-saturday/'>Fun Fun Saturday</a> in New York City's Chinatown
-          where we offer a large variety of classes to recent immigrant children ages 8-13. If you are interested in teaching a class, please reach out to me!
-        </p> */}
       </section>
 
 
