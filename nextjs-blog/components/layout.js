@@ -17,7 +17,7 @@ export default function Layout({ children, home }) {
           property="og:image"
           content={"/images/zhangjustin.jpg"}
         />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="og:title" content={name + " - CS PhD Student"} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
