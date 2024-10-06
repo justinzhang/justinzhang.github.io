@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Justin Zhang';
-export const siteTitle = "Justin Zhang";
+export const siteTitle = "Justin Zhang | CS PhD @ Purdue";
 
 export default function Layout({ children, home }) {
   return (<div>
@@ -17,7 +17,7 @@ export default function Layout({ children, home }) {
           property="og:image"
           content={"/images/zhangjustin.jpg"}
         />
-        <meta name="og:title" content={name + " - CS PhD Student"} />
+        <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
