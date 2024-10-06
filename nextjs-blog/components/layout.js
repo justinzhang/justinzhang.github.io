@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Justin Zhang';
-export const siteTitle = "Justin Zhang's Website";
+export const siteTitle = "Justin Zhang";
 
 export default function Layout({ children, home }) {
   return (<div>
@@ -15,9 +15,7 @@ export default function Layout({ children, home }) {
         
         <meta
           property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle,
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content={"/images/zhangjustin.jpg"}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
