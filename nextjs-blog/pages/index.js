@@ -56,10 +56,11 @@ export default function Home({ allPostsData, allProjectData }) {
   //   )
   // }
 
-  let presentations = [{ title: "On the Selberg Sieve", date: "October 2023", id:"selberg", link: "/presentations/Arithmetic.pdf"},
-                        { title: "Coding Theory and Applications to Storage Systems", date: "May 2023", id: "coding-theory", link: "https://docs.google.com/presentation/d/1hN3y1v0eISPhWRdYFkJjnzSvrAD4_s2l4gR4GtQpVmU/edit?usp=sharing" },
-                        { title: "Matrix Approximations for Recommender Systems on TPUs", date: "May 2022", id:"tpu", link: "https://symposium.foragerone.com/meeting-of-the-minds-2022/presentations/46003"},
-                        {title: "Master's Thesis", date: "Dec 2024", id: "masters", link: "/presentations/SecureConvertibleCodesJustinzThesisDraft.pdf"}
+  let presentations = [
+                        // { title: "Coding Theory and Applications to Storage Systems", date: "May 2023", id: "coding-theory", link: "https://docs.google.com/presentation/d/1hN3y1v0eISPhWRdYFkJjnzSvrAD4_s2l4gR4GtQpVmU/edit?usp=sharing" },
+                        // { title: "Matrix Approximations for Recommender Systems on TPUs", date: "May 2022", id:"tpu", link: "https://symposium.foragerone.com/meeting-of-the-minds-2022/presentations/46003"},
+                        {title: "Secure Convertible Codes (Draft)", date: "Dec 2024", id: "masters", link: "/papers/SecureConvertibleCodesJustinzThesisDraft.pdf"},
+                        {title: "Secure Convertible Codes (Draft)", date: "Jan 2025", id: "aLDC", link: "/papers/AmortizedLDCs.pdf"}
                       ]
   
   const [hovered, setHovered] = useState(false);
@@ -123,7 +124,7 @@ export default function Home({ allPostsData, allProjectData }) {
         </section>
       </section> */}
      
-      <section className={`${utilStyles.headingLg}`}> Presentations
+      <section className={`${utilStyles.headingLg}`}> Research
         <section className={`${utilStyles.listItemFormat}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
