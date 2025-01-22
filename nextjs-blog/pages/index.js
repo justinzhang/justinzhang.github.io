@@ -60,7 +60,7 @@ export default function Home({ allPostsData, allProjectData }) {
                         // { title: "Coding Theory and Applications to Storage Systems", date: "May 2023", id: "coding-theory", link: "https://docs.google.com/presentation/d/1hN3y1v0eISPhWRdYFkJjnzSvrAD4_s2l4gR4GtQpVmU/edit?usp=sharing" },
                         // { title: "Matrix Approximations for Recommender Systems on TPUs", date: "May 2022", id:"tpu", link: "https://symposium.foragerone.com/meeting-of-the-minds-2022/presentations/46003"},
                         {title: "Secure Convertible Codes (Draft)", date: "Dec 2024", id: "masters", link: "/papers/SecureConvertibleCodesJustinzThesisDraft.pdf"},
-                        {title: "Secure Convertible Codes (Draft)", date: "Jan 2025", id: "aLDC", link: "/papers/AmortizedLDCs.pdf"}
+                        {title: "Amortized Locally Decodable Codes", date: "Jan 2025", id: "aLDC", link: "/papers/AmortizedLDCs.pdf"}
                       ]
   
   const [hovered, setHovered] = useState(false);
