@@ -97,8 +97,8 @@ export default function Home({ allPostsData, allProjectData }) {
         
         <p className={utilStyles.p}>
           Hi! I am a first year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. 
-          I am fortunate to be supported by the  CS Deptartment's Presidential Excellence PhD Award.
-          Previously, I completed my CS BS + CS MS at Carnegie Mellon University, where I was advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a>.
+          I am fortunate to be supported by the  CS Deptartment's Presidential Excellence PhD Award (2024 - 2028) and the Herbold scholarship (2024-2025)!
+          Previously, I completed my CS BS + MS at Carnegie Mellon University, where I was advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a>.
         </p>
 
         <p className={utilStyles.p}>

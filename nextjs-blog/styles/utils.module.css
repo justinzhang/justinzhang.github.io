@@ -73,10 +73,14 @@
     margin-top: 2rem; 
     margin-left: 2rem;
     margin-right: 2rem;
-    width: auto;
-    height: auto;
-    object-fit: cover;
     
+
+
+    max-width:100%;
+    width: 10rem;  /* Ensures it scales with the window */
+    max-width: 500px; /* Optional: Set a max width to prevent it from getting too large */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover;
 
   }
   
@@ -112,3 +116,5 @@
   .lightText {
     color: #f9f9f9;
   }
+
+  
