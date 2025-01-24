@@ -59,8 +59,8 @@ export default function Home({ allPostsData, allProjectData }) {
   let presentations = [
                         // { title: "Coding Theory and Applications to Storage Systems", date: "May 2023", id: "coding-theory", link: "https://docs.google.com/presentation/d/1hN3y1v0eISPhWRdYFkJjnzSvrAD4_s2l4gR4GtQpVmU/edit?usp=sharing" },
                         // { title: "Matrix Approximations for Recommender Systems on TPUs", date: "May 2022", id:"tpu", link: "https://symposium.foragerone.com/meeting-of-the-minds-2022/presentations/46003"},
-                        {title: "Secure Convertible Codes (Draft)", date: "Dec 2024", id: "masters", link: "/papers/SecureConvertibleCodesJustinzThesisDraft.pdf"},
-                        {title: "Amortized Locally Decodable Codes", date: "Jan 2025", id: "aLDC", link: "/papers/AmortizedLDCs.pdf"}
+                        // {title: "Secure Convertible Codes (Draft)", date: "Dec 2024", id: "masters", link: "/papers/SecureConvertibleCodesJustinzThesisDraft.pdf", authors: "Justin Zhang and Rashmi Vinayak"},
+                        {title: "Amortized Locally Decodable Codes", date: "Jan 2025", id: "aLDC", link: "/papers/AmortizedLDCs.pdf", authors: "Jeremiah Blocki and Justin Zhang"}
                       ]
   
   const [hovered, setHovered] = useState(false);
@@ -103,7 +103,6 @@ export default function Home({ allPostsData, allProjectData }) {
         
         <p className={utilStyles.p}>
           Hi! I am a first year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. 
-          I am fortunate to be supported by the  CS Deptartment's Presidential Excellence PhD Award (2024 - 2028) and the Herbold scholarship (2024-2025)!
           Previously, I completed my CS BS + MS at Carnegie Mellon University, where I was advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a>.
         </p>
 
@@ -134,13 +133,19 @@ export default function Home({ allPostsData, allProjectData }) {
         <section className={`${utilStyles.listItemFormat}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
-            {presentations.map(({ title,date,link,id}) => (
+            {presentations.map(({ title,date,link,id,authors}) => (
             <li className={utilStyles.listItem} key={id}>
             <Link href={link} dangerouslySetInnerHTML={{ __html: title}}/>
-            
             <small className={utilStyles.lightText}>
-               {" (" + date})
+               {" (" + date + ")"} 
             </small>
+          
+            <p></p>
+            <small className={utilStyles.lightText}>
+                {authors}
+            </small>
+               
+            
             </li>
           ))}
           </ul>
