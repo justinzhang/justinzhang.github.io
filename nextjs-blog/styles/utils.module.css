@@ -118,3 +118,8 @@
   }
 
   
+  @media (max-width: 768px) {
+    .picture {
+      display: none;
+    }
+  }
