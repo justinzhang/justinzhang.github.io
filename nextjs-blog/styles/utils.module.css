@@ -5,7 +5,11 @@
     letter-spacing: -0.05rem;
     margin: 1rem 0;
   }
-  
+  .phone {
+    margin-bottom: 1rem;
+    display: none;
+
+  }
   .headingXl {
     margin-left: 1rem;
     margin-top: 1rem;
@@ -124,6 +128,15 @@
     .headingSm {
       display: none;
     }
+    .phone {
+      display: block; /* or flex depending on your layout needs */
+    }
   }
 
   @media (max-width: 768px) {
+    .phone {
+      display: block; /* or flex depending on your layout needs */
+    }
+  }
+
+

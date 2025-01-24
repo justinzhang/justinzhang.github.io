@@ -94,6 +94,12 @@ export default function Home({ allPostsData, allProjectData }) {
       </motion.div>
 
       <section className={utilStyles.paragraphVert}>
+        <p className={utilStyles.phone}>
+        Email: zhan3554 [at] purdue.edu
+         
+        </p>
+
+        <p className={utilStyles.phone}><a href='/docs/cv.pdf'>My CV</a></p>
         
         <p className={utilStyles.p}>
           Hi! I am a first year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. 
