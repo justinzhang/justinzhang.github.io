@@ -2,8 +2,9 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import { getSortedPostsData, titleToKatex } from './../lib/posts';
+import { getSortedPostsData, titleToKatex } from '../lib/posts';
 import { getSortedProjectData } from '../lib/projects';
+import { getSortedTeachingsData } from '../lib/teaching';
 import Date from '../components/date';
 import { motion } from 'framer-motion';
 import { vi } from 'date-fns/locale';
@@ -16,6 +17,7 @@ export async function getStaticProps() {
 
   let allPostsData = getSortedPostsData();
   let allProjectData = getSortedProjectData();
+  let allTeachingData = getSortedTeachingsData();
 
   for (let postData of allPostsData) {
     postData.title = await titleToKatex(postData.title);
@@ -25,15 +27,20 @@ export async function getStaticProps() {
     projectData.title = await titleToKatex(projectData.title);
   }
 
+  for (let teachingData of allTeachingData) {
+    teachingData.title = await titleToKatex(teachingData.title);
+  }
+
   return {
     props: {
       allPostsData,
       allProjectData,
+      allTeachingData,
     },
   };
 }
 
-export default function Home({ allPostsData, allProjectData }) {
+export default function Home({ allPostsData, allProjectData, allTeachingData }) {
 
   // for (let postType of postTypes) {
   //   postList.push(
@@ -152,22 +159,20 @@ export default function Home({ allPostsData, allProjectData }) {
         </section>
       </section>
       
-{/*       
-      <section className={`${utilStyles.headingLg}`}> Posts
-        <section className={`${utilStyles.listItemFormat}`}>
+
+
+      {<section className={`${utilStyles.headingLg}`}> Teaching
+        <section className={`${utilStyles.listItemFormatWider}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title }) => (
+            {allTeachingData.map(({ id, date, title }) =>(
             <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
+            <Link href={`/teaching/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
             </li>
           ))}
           </ul>
         </section>
-      </section> */}
+      </section>}
       
     </Layout>);
 

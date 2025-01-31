@@ -34,8 +34,18 @@
     margin-left: 1rem;
     font-size: 1.2rem;
     line-height: 1.5;
-    width: 90%;
+    width: 100%;
   }
+
+  .textMd a {
+    color: rgb(0, 3, 205);
+  }
+
+  .textMd a:hover {
+    color: #e3b46c;
+  }
+
+
 
   .articleText {
     display: flex;
