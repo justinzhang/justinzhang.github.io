@@ -11,7 +11,6 @@ import { vi } from 'date-fns/locale';
 import { useState } from 'react';
 import { set } from 'date-fns';
 
-const postTypes = ["Posts", "Presentations"];
 
 export async function getStaticProps() {
 
@@ -33,41 +32,17 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allPostsData,
-      allProjectData,
       allTeachingData,
     },
   };
 }
 
-export default function Home({ allPostsData, allProjectData, allTeachingData }) {
-
-  // for (let postType of postTypes) {
-  //   postList.push(
-  //     <section className={`${utilStyles.headingLg}`}> {postType}
-  //       <section className={`${utilStyles.headingMd}`}>
-  //       <div className={utilStyles.blockshit}>&nbsp;</div>
-  //         <ul className={utilStyles.list}>
-  //           {allPostsData[postType].map(({ id, date, title }) => (
-  //             console.log(id),
-  //           <li className={utilStyles.listItem} key={id}>
-  //           <Link href={`/${postType}/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
-  //           <small className={utilStyles.lightText}>
-  //             <Date dateString={date} />
-  //           </small>
-  //           </li>
-  //         ))}
-  //         </ul>
-  //       </section>
-  //     </section>
-  //   )
-  // }
+export default function Home({ allTeachingData }) {
 
   let presentations = [
-                        // { title: "Coding Theory and Applications to Storage Systems", date: "May 2023", id: "coding-theory", link: "https://docs.google.com/presentation/d/1hN3y1v0eISPhWRdYFkJjnzSvrAD4_s2l4gR4GtQpVmU/edit?usp=sharing" },
-                        // { title: "Matrix Approximations for Recommender Systems on TPUs", date: "May 2022", id:"tpu", link: "https://symposium.foragerone.com/meeting-of-the-minds-2022/presentations/46003"},
-                        // {title: "Secure Convertible Codes (Draft)", date: "Dec 2024", id: "masters", link: "/papers/SecureConvertibleCodesJustinzThesisDraft.pdf", authors: "Justin Zhang and Rashmi Vinayak"},
-                        {title: "Amortized Locally Decodable Codes", date: "Jan 2025", id: "aLDC", link: "https://arxiv.org/abs/2502.10538", authors: "Jeremiah Blocki and Justin Zhang"}
+    {title: "Amortized Locally Decodable Codes for Insertions and Deletions", venue: [], id: "insDelaLDC", linksText: [], links: [], authors: "Jeremiah Blocki and Justin Zhang"},
+    {title: "Amortized Locally Decodable Codes", venue: ["ISIT 2025"], id: "aLDC", linksText: ["arXiv"], links: ["https://arxiv.org/abs/2502.10538"], authors: "Jeremiah Blocki and Justin Zhang"},
+    {title: "Secure Convertible Codes", venue: ["ISIT 2025"], linksText: ["Preprint", "Master's Thesis"], links: ["/papers/SecureConvertibleCodesFull.pdf", "/papers/SecureConvertibleCodesThesis.pdf"], authors: "Justin Zhang and  K.V. Rashmi"}
                       ]
   
   const [hovered, setHovered] = useState(false);
@@ -109,65 +84,64 @@ export default function Home({ allPostsData, allProjectData, allTeachingData }) 
         <p className={utilStyles.phone}><a href='/docs/cv.pdf'>My CV</a></p>
         
         <p className={utilStyles.p}>
-          Hi! I am a first year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. 
-          Previously, I completed my CS BS + MS at Carnegie Mellon University, where I was advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a>.
+          Hi! I am a first year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. I am thankful to be supported in part by the 
+          <a href="https://www.purdue.edu/newsroom/archive/purduetoday/releases/2023/Q2/purdue-invests-in-graduate-student-stipends,-raising-minima-and-launching-presidential-doctoral-excellence-awards.html"><i> Presidential Doctoral Excellence Award </i> </a>
+          and the <a href="https://www.bobherbold.com/"><i> Herbold Fellowship</i></a>.
+          
         </p>
 
         <p className={utilStyles.p}>
-         My research interests lie in the intersection of coding theory and cryptography. 
-         What are the fundamental trade-offs between security and fault tolerance? 
-         Moreover, what assumptions permit cryptography to be beneficial in coding theory and vice versa?
+         I am interested in several problems within the intersection of coding theory and cryptography. 
+         My broad objective is to understand what the fundamental trade-offs between statistical/computational security and fault tolerance are.
+         I am currently investigating how we can use cryptography to construct codes with improved rate, distance, and other relevant parameters beyond those known for worst-case assumptions.
+        </p>
+
+        <p className={utilStyles.p}>
+        Previously, I completed my computer science BS and MS at Carnegie Mellon University (2019-2024), where I was advised by <a href='https://www.cs.cmu.edu/~rvinayak/#group'>Rashmi Vinayak</a>.
         </p>
           
       </section>
 
 
-      {/* <section className={`${utilStyles.headingLg}`}> Projects
-        <section className={`${utilStyles.listItemFormat}`}>
-        <div className={utilStyles.blockshit}>&nbsp;</div>
-          <ul className={utilStyles.list}>
-            {allProjectData.map(({ id, date, title, summary }) => (
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={`/projects/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
-            <small className={utilStyles.lightText}>{summary} ({date}) </small>
-            </li>
-          ))}
-          </ul>
-        </section>
-      </section> */}
-     
+
       <section className={`${utilStyles.headingLg}`}> Research
         <section className={`${utilStyles.listItemFormat}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
-            {presentations.map(({ title,date,link,id,authors}) => (
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={link} dangerouslySetInnerHTML={{ __html: title}}/>
-            <small className={utilStyles.lightText}>
-               {" (" + date + ")"} 
-            </small>
-          
-            <p></p>
-            <small className={utilStyles.lightText}>
-                {authors}
-            </small>
-               
-            
-            </li>
-          ))}
+            {presentations.map(({ title,venue,linksText,links,id,authors}) => (
+              <li className={utilStyles.listItem} key={id}>
+                <i>{title}</i>
+                  <p></p>
+                  
+                <small className={utilStyles.lightText}> {authors}</small>
+                  <p></p>
+                
+                <small className={utilStyles.lightText}> {venue.map((v) => v + ". ")} 
+                    
+                    {links.map((link, i) => (
+                      <span key={i}>
+                        <Link href={link} dangerouslySetInnerHTML={{__html: linksText[i]}} />
+                        {i < links.length - 1 && <span>&nbsp;&nbsp;</span>}
+                      </span>
+                    ))}
+                </small>
+              </li>
+            ))}
           </ul>
         </section>
       </section>
       
 
 
-      {<section className={`${utilStyles.headingLg}`}> Teaching
+      {<section className={`${utilStyles.headingLg}`}> Teaching Assistant Materials
         <section className={`${utilStyles.listItemFormatWider}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
-            {allTeachingData.map(({ id, date, title }) =>(
+            {allTeachingData.map(({ id, title, semester }) =>(
             <li className={utilStyles.listItem} key={id}>
             <Link href={`/teaching/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
+            <p></p>
+            {semester}
             </li>
           ))}
           </ul>

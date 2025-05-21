@@ -9,11 +9,12 @@ import { titleToKatex } from '../../lib/teaching';
 export async function getStaticProps({ params }) {
     const teachingData = await getTeachingData(params.id);
     const teachingTitle = await titleToKatex(teachingData.title);
+    // const teachingSemester = await titleToKatex(teachingData.semester)
 
     return {
       props: {
         teachingData,
-        teachingTitle,
+        teachingTitle
       },
     };
   }
@@ -28,14 +29,14 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Teaching({ teachingData, teachingTitle }) {
+export default function Teaching({ teachingData, teachingTitle}) {
     return (
       <Layout>
         <Head>
             <title>{teachingData.id}</title>
         </Head>
         <article>
-        <section className={postsStyles.headingLg} dangerouslySetInnerHTML={{ __html: teachingTitle}}/>
+        <section className={postsStyles.headingLg} dangerouslySetInnerHTML={{ __html: teachingTitle + "(" + teachingData.semester + ")"}}/>
           <div className={postsStyles.dateMd}>
             {teachingData.summary}
           </div>

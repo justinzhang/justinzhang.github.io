@@ -113,12 +113,12 @@
   .listItem {
     margin-left: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
-  .listItem:hover {
+  /* .listItem:hover {
     color: #b5c5bd;
-  }
+  } */
 
   .listItem:visited {
     color: #e3dbdb
