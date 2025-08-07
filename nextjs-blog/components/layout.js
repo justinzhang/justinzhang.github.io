@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/zhangjustin.jpg"
+              src="/images/zhangjustin.png"
               className={utilStyles.picture}
               height={1000}
               width={800}
