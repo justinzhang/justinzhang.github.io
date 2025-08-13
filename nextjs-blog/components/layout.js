@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-
+import { Analytics } from "@vercel/analytics/next"
 const name = 'Justin Zhang';
 export const siteTitle = "Justin Zhang | CS PhD @ Purdue";
 
@@ -54,6 +54,7 @@ export default function Layout({ children, home }) {
           <Link href="/" className={styles.backToHome}>← Back to home</Link>
       )}
       <SpeedInsights />
+      <Analytics />
       </main>
       
     </div>
