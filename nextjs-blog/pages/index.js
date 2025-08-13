@@ -42,7 +42,7 @@ export default function Home({ allTeachingData }) {
   let presentations = [
     {title: "Amortized Locally Decodable Codes for Insertions and Deletions", venue: ["ITC 2025"], id: "insDelaLDC", linksText: ["arXiv"], links: ["https://arxiv.org/abs/2507.03141"], authors: "Jeremiah Blocki and Justin Zhang"},
     {title: "Amortized Locally Decodable Codes", venue: ["ISIT 2025"], id: "aLDC", linksText: ["arXiv"], links: ["https://arxiv.org/abs/2502.10538"], authors: "Jeremiah Blocki and Justin Zhang"},
-    {title: "Secure Convertible Codes", venue: ["ISIT 2025"], linksText: ["Preprint", "Master's Thesis"], links: ["/papers/SecureConvertibleCodesFull.pdf", "/papers/SecureConvertibleCodesThesis.pdf"], authors: "Justin Zhang and  K.V. Rashmi"}
+    {title: "Secure Convertible Codes", venue: ["ISIT 2025"], linksText: ["Preprint", "Master's Thesis"], links: ["/papers/SecureConvertibleCodesFull.pdf", "http://reports-archive.adm.cs.cmu.edu/anon/2024/CMU-CS-24-160.pdf"], authors: "Justin Zhang and  K.V. Rashmi"}
                       ]
   
   const [hovered, setHovered] = useState(false);
