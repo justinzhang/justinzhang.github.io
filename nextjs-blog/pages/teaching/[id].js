@@ -3,6 +3,7 @@ import { getTeachingData, getAllTeachingIds } from '../../lib/teaching';
 import Head from 'next/head';
 import postsStyles from '../../styles/posts.module.css';
 import { titleToKatex } from '../../lib/teaching';
+import ReactMarkdown from 'react-markdown';
 
 
 
@@ -33,18 +34,21 @@ export default function Teaching({ teachingData, teachingTitle}) {
     return (
       <Layout>
         <Head>
-            <title>{teachingData.id}</title>
+          <title>{teachingData.id}</title>
         </Head>
         <article>
-        <section className={postsStyles.headingLg} dangerouslySetInnerHTML={{ __html: teachingTitle + "(" + teachingData.semester + ")"}}/>
+          <section className={postsStyles.headingLg}>
+            <span dangerouslySetInnerHTML={{ __html: teachingTitle }} />
+            <span> ({teachingData.semester})</span>
+          </section>
           <div className={postsStyles.dateMd}>
-            {teachingData.summary}
+            <ReactMarkdown>{teachingData.summary}</ReactMarkdown>
           </div>
-        <section className={postsStyles.articleText}>
-          <div className={postsStyles.blockshit}>&nbsp;</div>
-          <div className={postsStyles.textMd} dangerouslySetInnerHTML={{ __html: teachingData.contentHtml }} />
-        </section>
-      </article>
+          <section className={postsStyles.articleText}>
+            <div className={postsStyles.blockshit}>&nbsp;</div>
+            <div className={postsStyles.textMd} dangerouslySetInnerHTML={{ __html: teachingData.contentHtml }} />
+          </section>
+        </article>
       </Layout>
     );
 

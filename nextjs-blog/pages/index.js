@@ -137,13 +137,15 @@ export default function Home({ allTeachingData }) {
         <section className={`${utilStyles.listItemFormatWider}`}>
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
-            {allTeachingData.map(({ id, title, semester }) =>(
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={`/teaching/${id}`} dangerouslySetInnerHTML={{ __html: title}}/>
-            <p></p>
-            {semester}
-            </li>
-          ))}
+            {allTeachingData
+              .filter(({ semester }) => semester === "Fall 2025")
+              .map(({ id, title, semester }) => (
+                <li className={utilStyles.listItem} key={id}>
+                  <Link href={`/teaching/${id}`} dangerouslySetInnerHTML={{ __html: title }}/>
+                  <p></p>
+                  {semester}
+                </li>
+              ))}
           </ul>
         </section>
       </section>}
