@@ -84,7 +84,7 @@ export default function Home({ allTeachingData }) {
         <p className={utilStyles.phone}><a href='/docs/cv.pdf'>My CV</a></p>
         
         <p className={utilStyles.p}>
-          Hi! I am a first year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. I am thankful to be supported in part by the 
+          Hi! I am a second year CS PhD student at Purdue University advised by  <a href="https://www.cs.purdue.edu/homes/jblocki/">Jeremiah Blocki</a>. I am thankful to be supported in part by the 
           <a href="https://www.purdue.edu/newsroom/archive/purduetoday/releases/2023/Q2/purdue-invests-in-graduate-student-stipends,-raising-minima-and-launching-presidential-doctoral-excellence-awards.html"><i> Presidential Doctoral Excellence Award </i> </a>
           and the <a href="https://www.bobherbold.com/"><i> Herbold Fellowship</i></a>.
           
