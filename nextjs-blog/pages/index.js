@@ -41,7 +41,7 @@ export default function Home({ allTeachingData }) {
 
   let presentations = [
     {title: "Amortized Locally Decodable Codes for Insertions and Deletions", venue: ["ITC 2025"], id: "insDelaLDC", linksText: ["Conference Ver.","arXiv"], links: ["https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITC.2025.1","https://arxiv.org/abs/2507.03141"], authors: "Jeremiah Blocki and Justin Zhang"},
-    {title: "Amortized Locally Decodable Codes", venue: ["ISIT 2025"], id: "aLDC", linksText: ["arXiv"], links: ["https://arxiv.org/abs/2502.10538"], authors: "Jeremiah Blocki and Justin Zhang"},
+    {title: "Amortized Locally Decodable Codes", venue: ["ISIT 2025"], id: "aLDC", linksText: ["Conference Ver.", "arXiv"], links: ["https://ieeexplore.ieee.org/document/11195436","https://arxiv.org/abs/2502.10538"], authors: "Jeremiah Blocki and Justin Zhang"},
     {title: "Secure Convertible Codes", venue: ["ISIT 2025"], linksText: ["Conference Ver.", "Master's Thesis"], links: ["https://ieeexplore.ieee.org/document/11195603", "http://reports-archive.adm.cs.cmu.edu/anon/2024/CMU-CS-24-160.pdf"], authors: "Justin Zhang and  K.V. Rashmi"}
                       ]
   
