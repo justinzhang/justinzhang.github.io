@@ -138,14 +138,14 @@ export default function Home({ allTeachingData }) {
         <div className={utilStyles.blockshit}>&nbsp;</div>
           <ul className={utilStyles.list}>
             {allTeachingData
-              .filter(({ semester }) => semester === "Fall 2025")
+              .filter(({ semester }) => semester === "Fall 2025" || semester === "Spring 2026") //wtf fix this shit eventually, prob want a new directory here to all course material in reverse chron. order
               .map(({ id, title, semester }) => (
                 <li className={utilStyles.listItem} key={id}>
                   <Link href={`/teaching/${id}`} dangerouslySetInnerHTML={{ __html: title }}/>
                   <p></p>
                   {semester}
                 </li>
-              ))}
+              )).reverse()}
           </ul>
         </section>
       </section>}
