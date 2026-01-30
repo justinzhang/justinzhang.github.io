@@ -91,9 +91,9 @@ export default function Home({ allTeachingData }) {
         </p>
 
         <p className={utilStyles.p}>
-         I am interested in several problems within the intersection of coding theory and cryptography. 
-         My broad objective is to understand what the fundamental trade-offs between statistical/computational security and fault tolerance are.
-         I am currently investigating how we can use cryptography to construct codes with improved rate, distance, and other relevant parameters beyond those known for worst-case assumptions.
+         I am interested in several problems within the intersections of coding theory, cryptography, and quantum computing. 
+         I am currently investigating how we can use cryptography to construct codes with improved parameters beyond those known for worst-case assumptions.
+         Broadly, I am interested in topics pertaining to fault tolerant, secure computation.
         </p>
 
         <p className={utilStyles.p}>
