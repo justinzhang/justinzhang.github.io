@@ -49,6 +49,8 @@ export default function Home({ allTeachingData }) {
   return (
      <Layout home>
       <Head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7248577139624729"
+     crossorigin="anonymous"></script>
         <title>{siteTitle}</title>
       </Head>
       <motion.div 
